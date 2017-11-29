@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="NASA Buzzword Generator, NASA Trolling" />
+        <meta name="viewport" id="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+        <title>Buzzword, 1966 NASA Style :-) </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js" type="text/javascript"></script>
+        <script src="buzzword.js" type="text/javascript"></script>
+        <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
+        <style>
+
+        BODY,P,DIV, OL LI, TD, TH, INPUT,BUTTON {
+        font-family: 'Tex Gyre Heros', 'Basic Sans SF',Helvetica,Arial sans-serif;
+        font-size: 16pt;
+        margin: 0px;
+        background-color:black;
+        }
+        .container {
+        text-align:center;
+        width:90%;
+        max-width:720px;
+        margin: 0 auto;
+        background-color:white;
+        }
+        .container DIV { background-color:white; }
+        .generate-res {
+        background-image:url('background.png');
+        font-family: "DejaVu Sans Mono","Consolas",monospace;
+        font-size:24pt;
+        text-align:center;
+        padding: 1em 0.5em;
+        margin: 1em 0;
+        color:#20FF20;
+        }
+        .generate-btn {
+        display:block;
+        margin: 1em auto;
+        background-color: #080;
+        color:white;
+        font-family: 'DejaVu Sans Mono','Consolas',monospace;
+        font-size: 1.2em;
+        padding: 0.5em;
+        }
+
+        .info, .disclaimer {
+        margin: 0.5em;
+        font-size: 0.8em;
+        padding: 1em;
+        }    
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="moon.jpg" alt="moon-logo" style="width:100%;" />
+            <h2>Buzzword, 1966 NASA Style :-) </h2>
+            <div class="generate-space">
+                <button class="generate-btn" data-bind="click:generateBuzzword">Generate!</button>
+                <div class="generate-res" data-bind="text:buzzword"></div>
+            </div>
+            <div class="info">
+                <a href="https://twitter.com/People_Of_Space/status/935240141999955969" target="_new">This</a>
+                is the tweet that started it all.
+            </div>
+            <div class="disclaimer">
+            This site is not owned by NASA, nor it is by any means associated with NASA.
+            </div>  
+            <div class="disclaimer">
+            Coded by Massimiliano Lambertini, 2017.
+            </div>  
+        <script type="text/javascript">
+        ko.applyBindings(new BuzzwordModel());
+        </script>
+        </div>
+    </body>
+</html>
